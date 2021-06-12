@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserNameControl.vue renders page correctly 1`] = `<div class="set-user-name-block"><button>Set User Name</button><input></div>`;

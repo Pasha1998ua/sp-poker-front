@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`RoomControl.vue renders page correctly 1`] = `<div class="control-block"><button>Join</button><button>Leave</button></div>`;

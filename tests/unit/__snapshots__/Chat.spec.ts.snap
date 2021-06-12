@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Chat.vue renders page correctly 1`] = `
+<div class="chat-block"><button>Send</button><input>
+  <table class="chat-list"></table>
+</div>
+`;

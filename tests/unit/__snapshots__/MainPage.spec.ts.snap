@@ -1,7 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`MainPage.vue renders page correctly 1`] = `
-<div class="main-page"><button>Send</button><input>
-  <table class="chat-block"></table>
+<div class="main-page">
+  <user-name-control-stub></user-name-control-stub>
+  <room-control-stub></room-control-stub>
+  <chat-stub></chat-stub>
 </div>
 `;
