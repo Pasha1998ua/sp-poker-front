@@ -16,6 +16,7 @@
 import { defineComponent } from 'vue'
 import { mapActions, mapGetters } from 'vuex'
 import ChatMessage from '@/models/ChatMessage'
+import localStorageHelper from '@/helpers/localStorageHelper'
 
 export default defineComponent({
   name: 'MainPage',
@@ -44,7 +45,7 @@ export default defineComponent({
     emitMessage () {
       const chatMsg: ChatMessage = {
         room: 'PavloKey',
-        userNickName: 'Temp User',
+        userNickName: localStorageHelper.getUserName(),
         sentTimestamp: Date.now(),
         message: this.inputVal
       }

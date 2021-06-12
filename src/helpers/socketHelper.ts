@@ -36,11 +36,11 @@ export default class SocketHelper {
     this.socket.emit(MESSAGE_CHANNEL, chatMsg)
   }
 
-  public joinRoom (key: string): void {
-    this.socket.emit('joinRoom', key)
+  public joinRoom (key: string, user: string): void {
+    this.socket.emit('joinRoom', key, user)
   }
 
-  public leaveRoom (key: string): void {
-    this.socket.emit('leaveRoom', key)
+  public leaveRoom (key: string, user: string): void {
+    this.socket.emit('leaveRoom', key, user)
   }
 }

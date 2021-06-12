@@ -1,5 +1,6 @@
 <template>
   <div class="main-page">
+    <UserNameControl/>
     <RoomControl/>
     <Chat/>
   </div>
@@ -9,12 +10,14 @@
 import { defineComponent } from 'vue'
 import Chat from '@/components/Chat.vue'
 import RoomControl from '@/components/RoomControl.vue'
+import UserNameControl from '@/components/UserNameControl.vue'
 
 export default defineComponent({
   name: 'MainPage',
   components: {
     Chat,
-    RoomControl
+    RoomControl,
+    UserNameControl
   },
   data () {
     return {}
