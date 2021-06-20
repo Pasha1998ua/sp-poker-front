@@ -12,6 +12,8 @@ import Chat from '@/components/Chat.vue'
 import RoomControl from '@/components/RoomControl.vue'
 import UserNameControl from '@/components/UserNameControl.vue'
 
+import localStorageHelper from '@/helpers/localStorageHelper'
+
 export default defineComponent({
   name: 'MainPage',
   components: {
@@ -21,6 +23,9 @@ export default defineComponent({
   },
   data () {
     return {}
+  },
+  created () {
+    localStorageHelper.getUserId()
   }
 })
 </script>

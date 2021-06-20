@@ -2,6 +2,9 @@ import io from 'socket.io-client'
 import ChatMessage from '@/models/ChatMessage'
 
 const MESSAGE_CHANNEL = 'chatMsgEvent'
+const UPDATE_CHANNEL = 'updateUser'
+const JOIN_CHANNEL = 'joinRoom'
+const LEAVE_CHANNEL = 'leaveRoom'
 
 export default class SocketHelper {
   private static instance: SocketHelper;
@@ -36,11 +39,15 @@ export default class SocketHelper {
     this.socket.emit(MESSAGE_CHANNEL, chatMsg)
   }
 
-  public joinRoom (key: string, user: string): void {
-    this.socket.emit('joinRoom', key, user)
+  public joinRoom (key: string, id: string, user: string): void {
+    this.socket.emit(JOIN_CHANNEL, key, id, user)
   }
 
-  public leaveRoom (key: string, user: string): void {
-    this.socket.emit('leaveRoom', key, user)
+  public leaveRoom (key: string, id: string, user: string): void {
+    this.socket.emit(LEAVE_CHANNEL, key, id, user)
+  }
+
+  public updateInfo (key: string, id: string, user: string): void {
+    this.socket.emit(UPDATE_CHANNEL, key, id, user)
   }
 }
